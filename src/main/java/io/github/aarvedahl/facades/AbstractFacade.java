@@ -13,7 +13,6 @@ public abstract class AbstractFacade<T> {
 
     protected abstract EntityManager getEntityManager();
 
-    @RolesAllowed({"admin"})
     public void create(T entity) {
         getEntityManager().persist(entity);
     }

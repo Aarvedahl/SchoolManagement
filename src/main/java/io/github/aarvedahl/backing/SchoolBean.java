@@ -50,7 +50,7 @@ public class SchoolBean implements Serializable{
         courses.add(course);
     }
 
-    // TODO Bugg när man ska lägga till en ny kurs
+    // TODO Bugg när man redigerar namn på en kurs, en lösning kan vara olika sidor vilket tvingar användaren att se refresha den andra tabellen
     // TODO Lägga till studenter samt redigera vilka kurser de läser.
     // TODO Alternativt på alla kurser så visar man en lista med checkboxar på varje student när man kan välja om de går i kursen eller inte.
 }
