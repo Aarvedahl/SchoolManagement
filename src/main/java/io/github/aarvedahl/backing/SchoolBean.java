@@ -8,11 +8,14 @@ import io.github.aarvedahl.facades.StudentFacade;
 import javax.ejb.EJB;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
+import java.io.Serializable;
 import java.util.List;
 
 @Named
 @ViewScoped
-public class SchoolBean {
+public class SchoolBean implements Serializable{
+    private static final long serialVersionUID = 1L;
+
 
     @EJB private StudentFacade studentEJB;
     @EJB private CourseFacade courseEJB;
