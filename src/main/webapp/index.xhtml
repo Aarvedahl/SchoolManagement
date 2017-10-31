@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+
+    <h:form id="schoolForm">
+        <p:dataTable id="studentTable" value="#{schoolBean.students}" var="student"
+                     editable="true" editMode="cell">
+
+            <f:facet name="header">Students</f:facet>
+
+            <p:column headerText="Name">
+                <h:outputText id="studentName" value="#{student.fullname}" />
+            </p:column>
+        </p:dataTable>
+
+
+        <p:dataTable id="courseTable" value="#{schoolBean.courses}" var="course"
+                     editable="true" editMode="cell">
+
+            <f:facet name="header">Courses</f:facet>
+
+            <p:column headerText="Name">
+                <h:outputText id="courseName" value="#{course.coursenamez}" />
+            </p:column>
+        </p:dataTable>
+
+    </h:form>
+</h:body>
+</html>

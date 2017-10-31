@@ -1,12 +1,15 @@
 package io.github.aarvedahl.entities;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Course {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int courseid;
 
+    @Column
     private String coursename;
 
     public int getCourseid() { return courseid; }

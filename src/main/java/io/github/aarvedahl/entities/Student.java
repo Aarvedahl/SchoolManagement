@@ -1,12 +1,15 @@
 package io.github.aarvedahl.entities;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentid;
 
+    @Column
     private String fullname;
 
     public String getFullname() { return fullname; }
