@@ -19,6 +19,11 @@
             <p:column headerText="Name">
                 <h:outputText id="studentName" value="#{student.fullname}" />
             </p:column>
+            <p:column headerText="Courses">
+                <p:dataList value="#{student.courses}" var="course">
+                    <h:outputText value="#{course.coursename}" />
+                </p:dataList>
+            </p:column>
         </p:dataTable>
 
         <p:dataTable id="courseTable" value="#{schoolBean.courses}" var="course"
