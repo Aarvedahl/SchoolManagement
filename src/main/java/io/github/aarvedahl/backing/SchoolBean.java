@@ -16,7 +16,6 @@ import java.util.List;
 public class SchoolBean implements Serializable{
     private static final long serialVersionUID = 1L;
 
-
     @EJB private StudentFacade studentEJB;
     @EJB private CourseFacade courseEJB;
 
@@ -36,4 +35,7 @@ public class SchoolBean implements Serializable{
         }
         return courses;
     }
+
+
+
 }

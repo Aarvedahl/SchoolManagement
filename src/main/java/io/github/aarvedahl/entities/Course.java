@@ -13,7 +13,16 @@ public class Course {
     @Column
     private String coursename;
 
-    @ManyToMany(mappedBy = "courses")
+    @ManyToMany
+    @JoinTable(
+            name="student_course",
+            joinColumns = {
+                    @JoinColumn(name="courseid", referencedColumnName = "courseid")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name="studentid", referencedColumnName = "studentid")
+            }
+    )
     private List<Student> students;
 
     public int getCourseid() { return courseid; }

@@ -17,16 +17,10 @@ public class Student {
     @JoinTable(
             name="student_course",
             joinColumns = {
-                    @JoinColumn(
-                            name="studentid",
-                            referencedColumnName = "studentid"
-                    )
+                    @JoinColumn(name="studentid", referencedColumnName = "studentid")
             },
             inverseJoinColumns = {
-                    @JoinColumn(
-                            name="courseid",
-                            referencedColumnName = "courseid"
-                    )
+                    @JoinColumn(name="courseid", referencedColumnName = "courseid")
             }
     )
     private List<Course> courses;

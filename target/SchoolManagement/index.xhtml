@@ -35,6 +35,11 @@
             <p:column headerText="Name">
                 <h:outputText id="courseName" value="#{course.coursename}" />
             </p:column>
+            <p:column headerText="Students">
+                <p:dataList value="#{course.students}" var="student">
+                    <h:outputText value="#{student.fullname}" />
+                </p:dataList>
+            </p:column>
         </p:dataTable>
 
 
