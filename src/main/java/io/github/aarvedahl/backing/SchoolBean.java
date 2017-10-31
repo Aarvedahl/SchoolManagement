@@ -36,6 +36,21 @@ public class SchoolBean implements Serializable{
         return courses;
     }
 
+    public void saveStudent(Student student) {
+        studentEJB.edit(student);
+    }
 
+    public void saveCourse(Course course) {
+        courseEJB.edit(course);
+    }
 
+    public void addCourse() {
+        Course course = new Course("");
+        courseEJB.create(course);
+        courses.add(course);
+    }
+
+    // TODO Bugg när man ska lägga till en ny kurs
+    // TODO Lägga till studenter samt redigera vilka kurser de läser.
+    // TODO Alternativt på alla kurser så visar man en lista med checkboxar på varje student när man kan välja om de går i kursen eller inte.
 }

@@ -17,7 +17,16 @@
                 <h:outputText id="studentID" value="#{student.studentid}" />
             </p:column>
             <p:column headerText="Name">
-                <h:outputText id="studentName" value="#{student.fullname}" />
+                <p:cellEditor>
+                    <f:facet name="output">
+                        <h:outputText value="#{student.fullname}" />
+                    </f:facet>
+                    <f:facet name="input">
+                        <h:inputText id="employeeName" value="#{student.fullname}">
+                            <p:ajax event="change" listener="#{schoolBean.saveStudent(student)}" update="studentTable" />
+                        </h:inputText>
+                    </f:facet>
+                </p:cellEditor>
             </p:column>
             <p:column headerText="Courses">
                 <p:dataList value="#{student.courses}" var="course">
@@ -26,14 +35,28 @@
             </p:column>
         </p:dataTable>
 
-        <p:dataTable id="courseTable" value="#{schoolBean.courses}" var="course"
-                     editable="true" editMode="cell">
+        <p:dataTable id="courseTable" value="#{schoolBean.courses}" var="course" editable="true" editMode="cell">
             <f:facet name="header">Courses</f:facet>
             <p:column headerText="CourseID">
                 <h:outputText id="courseID" value="#{course.courseid}" />
+                <f:facet name="footer">
+                    <p:outputPanel style="text-align: left;">
+                        <p:commandLink value="+" action="#{schoolBean.addCourse}"
+                                       update="courseTable" />
+                    </p:outputPanel>
+                </f:facet>
             </p:column>
             <p:column headerText="Name">
-                <h:outputText id="courseName" value="#{course.coursename}" />
+                <p:cellEditor>
+                    <f:facet name="output">
+                        <h:outputText value="#{course.coursename}" />
+                    </f:facet>
+                    <f:facet name="input">
+                        <h:inputText  id="courseName" value="#{course.coursename}">
+                            <p:ajax event="change" listener="#{schoolBean.saveCourse(course)}" update="courseTable" />
+                        </h:inputText>
+                    </f:facet>
+                </p:cellEditor>
             </p:column>
             <p:column headerText="Students">
                 <p:dataList value="#{course.students}" var="student">
@@ -41,9 +64,6 @@
                 </p:dataList>
             </p:column>
         </p:dataTable>
-
-
-
     </h:form>
 </h:body>
 </html>

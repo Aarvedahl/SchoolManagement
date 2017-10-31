@@ -31,4 +31,10 @@ public class Course {
     public void setCoursename(String coursename) { this.coursename = coursename; }
     public List<Student> getStudents() { return students; }
     public void setStudents(List<Student> students) { this.students = students; }
+
+    public Course() { }
+
+    public Course(String coursename) {
+        this.coursename = coursename;
+    }
 }
