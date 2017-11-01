@@ -50,7 +50,14 @@ public class SchoolBean implements Serializable{
         courses.add(course);
     }
 
+    public void addCourseToStudent() {
+        System.out.println();
+    }
+
+    public StudentFacade getStudentEJB() { return studentEJB; }
+
+    public CourseFacade getCourseEJB() { return courseEJB; }
+
+    // Kanske ett form där man väljer studenter från en lista samt vilken kurs och så kan man lägga till på det sättet. student.courses.add("course id etc") em.persist(student)
     // TODO Bugg när man redigerar namn på en kurs, en lösning kan vara olika sidor vilket tvingar användaren att se refresha den andra tabellen
-    // TODO Lägga till studenter samt redigera vilka kurser de läser.
-    // TODO Alternativt på alla kurser så visar man en lista med checkboxar på varje student när man kan välja om de går i kursen eller inte.
 }

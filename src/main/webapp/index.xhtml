@@ -64,6 +64,19 @@
                 </p:dataList>
             </p:column>
         </p:dataTable>
+
+        <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="username" value="Username:" />
+            <p:inputText id="username" value="" required="true" label="username" />
+
+            <h:outputLabel for="password" value="Password:" />
+            <p:password id="password" value="" required="true" label="password" />
+
+            <f:facet name="footer">
+                <p:commandButton value="Login" update="growl" actionListener="#{userLoginView.login}"
+                                 oncomplete="" />
+            </f:facet>
+        </h:panelGrid>
     </h:form>
 </h:body>
 </html>
