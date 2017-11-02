@@ -7,15 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db676064-e5ca-4a4a-84f3-455963ef6287" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/io/github/aarvedahl/backing/SchoolBean.class" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/io/github/aarvedahl/backing/SchoolBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/io/github/aarvedahl/converters/StudentConverter.class" afterPath="$PROJECT_DIR$/target/SchoolManagement/WEB-INF/classes/io/github/aarvedahl/converters/StudentConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/github/aarvedahl/backing/SchoolBean.class" afterPath="$PROJECT_DIR$/target/classes/io/github/aarvedahl/backing/SchoolBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/github/aarvedahl/converters/StudentConverter.class" afterPath="$PROJECT_DIR$/target/classes/io/github/aarvedahl/converters/StudentConverter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Attendence.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/converters/StudentConverter.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/converters/StudentConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SchoolManagement/index.xhtml" afterPath="$PROJECT_DIR$/target/SchoolManagement/index.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +23,8 @@
       <file leaf-file-name="Course.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Course.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1121#1122#0" expanded="true" />
@@ -41,16 +34,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchoolBean.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SchoolBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="99" column="28" lean-forward="true" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+            <state relative-caret-position="351">
+              <caret line="88" column="62" lean-forward="true" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
               <folding>
                 <element signature="e#924#925#0" expanded="true" />
                 <element signature="e#968#969#0" expanded="true" />
                 <element signature="e#1024#1025#0" expanded="true" />
                 <element signature="e#1066#1067#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Attendence.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Attendence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+              <folding>
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#396#397#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#645#646#0" expanded="true" />
+                <element signature="e#678#679#0" expanded="true" />
+                <element signature="e#710#711#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#843#844#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/converters/StudentConverter.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Attendence.java" />
       </list>
     </option>
   </component>
@@ -197,6 +218,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="aarvedahl" type="462c0819:PsiDirectoryNode" />
               <item name="converters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolManagement" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchoolManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="aarvedahl" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -453,12 +483,12 @@
       <workItem from="1509521280465" duration="1797000" />
       <workItem from="1509537230313" duration="1054000" />
       <workItem from="1509539280486" duration="8776000" />
-      <workItem from="1509626182023" duration="9728000" />
+      <workItem from="1509626182023" duration="9945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37577000" />
+    <option name="totallyTimeSpent" value="37794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,7 +525,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26744187" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16927083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16927083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -901,18 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/facades/AbstractFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -947,15 +965,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1165#1166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="99" column="28" lean-forward="true" selection-start-line="99" selection-start-column="28" selection-end-line="99" selection-end-column="28" />
+        <state relative-caret-position="351">
+          <caret line="88" column="62" lean-forward="true" selection-start-line="88" selection-start-column="62" selection-end-line="88" selection-end-column="62" />
           <folding>
             <element signature="e#924#925#0" expanded="true" />
             <element signature="e#968#969#0" expanded="true" />
             <element signature="e#1024#1025#0" expanded="true" />
             <element signature="e#1066#1067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Attendence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
           </folding>
         </state>
       </provider>
