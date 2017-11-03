@@ -76,6 +76,6 @@ public class SchoolBean implements Serializable{
         saveCourse(selectedCourse);
     }
 
-    // TODO ADD 
+    // TODO ADD
 
 }

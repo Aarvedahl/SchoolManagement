@@ -76,10 +76,9 @@
                 <p:selectOneMenu value="#{schoolBean.selectedStudent}" converter="io.github.aarvedahl.StudentConverter">
                     <f:selectItems value="#{schoolBean.students}" var="student" itemLabel="#{student.fullname}" itemValue="#{student}" />
                 </p:selectOneMenu>
-                <p:separator />
-                <p:separator />
                 <p:commandButton value="Add student" update="schoolForm" actionListener="#{schoolBean.addStudentToCourse()}" styleClass="ui-priority-primary" />
             </h:panelGrid>
+            <p:separator />
         </p:panel>
     </h:form>
 </h:body>

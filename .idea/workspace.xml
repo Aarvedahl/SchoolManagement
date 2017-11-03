@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db676064-e5ca-4a4a-84f3-455963ef6287" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/converters/StudentConverter.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/converters/StudentConverter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Course.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Course.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Student.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Student.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchoolBean.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SchoolBean.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="522">
-              <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+              <caret line="78" column="15" lean-forward="false" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
               <folding>
                 <element signature="e#839#840#0" expanded="true" />
                 <element signature="e#877#878#0" expanded="true" />
@@ -73,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+            <state relative-caret-position="488">
+              <caret line="80" column="27" lean-forward="false" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -117,8 +113,8 @@
         <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Course.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/converters/StudentConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
       </list>
     </option>
   </component>
@@ -480,12 +476,12 @@
       <workItem from="1509537230313" duration="1054000" />
       <workItem from="1509539280486" duration="8776000" />
       <workItem from="1509626182023" duration="9968000" />
-      <workItem from="1509708737643" duration="5650000" />
+      <workItem from="1509708737643" duration="5722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43467000" />
+    <option name="totallyTimeSpent" value="43539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,14 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/entities/Student.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5">
@@ -1006,13 +994,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/aarvedahl/backing/SchoolBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <caret line="78" column="15" lean-forward="false" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
           <folding>
             <element signature="e#839#840#0" expanded="true" />
             <element signature="e#877#878#0" expanded="true" />
             <element signature="e#940#941#0" expanded="true" />
             <element signature="e#994#995#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="80" column="27" lean-forward="false" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
