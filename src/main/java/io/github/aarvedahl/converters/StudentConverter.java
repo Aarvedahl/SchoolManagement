@@ -9,7 +9,7 @@ import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 import java.lang.annotation.Annotation;
 
-@FacesConverter(value = "studentConverter")
+@FacesConverter("io.github.aarvedahl.StudentConverter")
 public class StudentConverter implements Converter {
 
     @Override
@@ -18,7 +18,6 @@ public class StudentConverter implements Converter {
         try {
             id = Integer.parseInt(value);
         } catch (NumberFormatException e){
-            System.out.println("Number format Exception here");
             return "Number format Exception here";
         }
         SchoolBean schoolBean = context.getApplication().evaluateExpressionGet(context, "#{schoolBean}", SchoolBean.class);
@@ -28,11 +27,9 @@ public class StudentConverter implements Converter {
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
         if(value == null) {
-            System.out.println("Something went wrong");
             return "";
         }
         if(!(value instanceof Student)) {
-            System.out.println("it is not a instance of student");
             return "";
         }
 

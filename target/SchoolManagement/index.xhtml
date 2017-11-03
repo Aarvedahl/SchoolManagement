@@ -64,23 +64,22 @@
                 </p:dataList>
             </p:column>
         </p:dataTable>
+
         <p:panel header="Add a student to a course" style="margin-bottom:10px;">
+            <p:messages autoUpdate="true"/>
             <h:panelGrid columns="2" cellpadding="5">
-                <h:outputText value="Course ID" />
-                <h:outputText value="Student ID" />
-                <h:selectOneMenu id="course" value="#{schoolBean.choosenCourse}" label="Course">
-                    <f:selectItem itemLabel="Select One" itemValue="" noSelectionOption="true" />
-                    <f:selectItems value="#{schoolBean.courseids}"/>
-                </h:selectOneMenu>
-                <h:selectOneMenu id="student" value="#{schoolBean.choosenStudent}" label="Student">
-                    <f:selectItem itemLabel="Select One" itemValue="" noSelectionOption="true" />
-                    <f:selectItems value="#{schoolBean.studentids}"  />
-                </h:selectOneMenu>
-                   <!-- <f:selectItems value="#{schoolBean.students}" var="student"
-                                   itemLabel="#{student.fullname}" itemValue="#{student}" /> -->
+                <h:outputText value="Course" />
+                <h:outputText value="Student" />
+                <p:selectOneMenu value="#{schoolBean.selectedCourse}">
+                    <f:selectItems value="#{schoolBean.courses}" var="course" itemLabel="#{course.coursename}" itemValue="#{course}" />
+                </p:selectOneMenu>
+                <p:selectOneMenu value="#{schoolBean.selectedStudent}" converter="io.github.aarvedahl.StudentConverter">
+                    <f:selectItems value="#{schoolBean.students}" var="student" itemLabel="#{student.fullname}" itemValue="#{student}" />
+                </p:selectOneMenu>
+                <p:separator />
+                <p:separator />
+                <p:commandButton value="Add student" update="schoolForm" actionListener="#{schoolBean.addStudentToCourse()}" styleClass="ui-priority-primary" />
             </h:panelGrid>
-            <p:separator />
-            <p:commandButton value="Add student" id="ajax" update="schoolForm" actionListener="#{schoolBean.findStudent()}" styleClass="ui-priority-primary" />
         </p:panel>
     </h:form>
 </h:body>

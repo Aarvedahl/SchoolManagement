@@ -37,4 +37,18 @@ public class Course {
     public Course(String coursename) {
         this.coursename = coursename;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        return (other instanceof Course) && (courseid != 0)
+                ? courseid == (((Course) other).courseid)
+                : (other == this);
+    }
+
+    @Override
+    public int hashCode() {
+        return (courseid != 0)
+                ? (this.getClass().hashCode() + courseid)
+                : super.hashCode();
+    }
 }

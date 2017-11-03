@@ -31,4 +31,18 @@ public class Student {
     public void setStudentid(int studentid) { this.studentid = studentid; }
     public List<Course> getCourses() { return courses; }
     public void setCourses(List<Course> courses) { this.courses = courses; }
+
+    @Override
+    public boolean equals(Object other) {
+        return (other instanceof Student) && (studentid != 0)
+                ? studentid == (((Student) other).studentid)
+                : (other == this);
+    }
+
+    @Override
+    public int hashCode() {
+        return (studentid != 0)
+                ? (this.getClass().hashCode() + studentid)
+                : super.hashCode();
+    }
 }
