@@ -2,11 +2,13 @@ package io.github.aarvedahl.facades;
 
 import io.github.aarvedahl.entities.Course;
 
+import javax.annotation.security.DeclareRoles;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Stateless
+@DeclareRoles({"teacher", "student"})
 public class CourseFacade extends AbstractFacade<Course>{
 
     @PersistenceContext(unitName = "school")

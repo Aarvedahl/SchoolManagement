@@ -1,5 +1,6 @@
 package io.github.aarvedahl.facades;
 
+import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.RolesAllowed;
 import javax.persistence.EntityManager;
 import java.util.List;
