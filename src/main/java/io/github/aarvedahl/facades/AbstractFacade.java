@@ -5,6 +5,8 @@ import javax.annotation.security.RolesAllowed;
 import javax.persistence.EntityManager;
 import java.util.List;
 
+
+@DeclareRoles({"teacher", "student"})
 public abstract class AbstractFacade<T> {
     private Class<T> entityClass;
 
@@ -14,10 +16,12 @@ public abstract class AbstractFacade<T> {
 
     protected abstract EntityManager getEntityManager();
 
+    @RolesAllowed("teacher")
     public void create(T entity) {
         getEntityManager().persist(entity);
     }
 
+    @RolesAllowed("teacher")
     public void edit(T entity) {
         getEntityManager().merge(entity);
     }
@@ -25,6 +29,7 @@ public abstract class AbstractFacade<T> {
     public void remove(T entity) {
         getEntityManager().remove(getEntityManager().merge(entity));
     }
+
 
     public T find(Object id) {
         return getEntityManager().find(entityClass, id);

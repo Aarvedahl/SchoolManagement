@@ -8,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 @Stateless
-@DeclareRoles({"teacher", "student"})
 public class CourseFacade extends AbstractFacade<Course>{
 
     @PersistenceContext(unitName = "school")

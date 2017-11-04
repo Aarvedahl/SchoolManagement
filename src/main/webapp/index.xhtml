@@ -41,7 +41,7 @@
                 <h:outputText id="courseID" value="#{course.courseid}" />
                 <f:facet name="footer">
                     <p:outputPanel style="text-align: left;">
-                        <p:commandLink value="+" action="#{schoolBean.addCourse}" update="courseTable" />
+                        <p:commandLink value="+" action="#{schoolBean.addCourse}" update="courseTable" rendered="#{request.isUserInRole('admin')}"/>
                     </p:outputPanel>
                 </f:facet>
             </p:column>
@@ -64,7 +64,7 @@
             </p:column>
         </p:dataTable>
 
-        <p:panel header="Add a student to a course" style="margin-bottom:10px;">
+        <p:panel header="Add a student to a course" style="margin-bottom:10px;" rendered="#{request.isUserInRole('admin')}">
             <p:messages autoUpdate="true"/>
             <h:panelGrid columns="2" cellpadding="5">
                 <h:outputText value="Course" />
