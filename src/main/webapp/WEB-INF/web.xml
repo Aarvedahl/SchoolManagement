@@ -21,6 +21,10 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>schoolmanagement</realm-name>
+    </login-config>
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>All</web-resource-name>
