@@ -1,4 +1,8 @@
 package io.github.aarvedahl.webservice;
 
-public class SchoolManagement {
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+@ApplicationPath("")
+public class SchoolManagement extends Application{
 }
