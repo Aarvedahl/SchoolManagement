@@ -1,6 +1,5 @@
 package io.github.aarvedahl.webservice;
 
-import com.sportsing.api.Match;
 import io.github.aarvedahl.dao.DaoCourse;
 import io.github.aarvedahl.dao.DaoStudent;
 import io.github.aarvedahl.entities.Course;
@@ -59,11 +58,11 @@ public class StudentService {
     }
 
     @GET
-    @Path("/match")
+    @Path("/course")
     @Produces(MediaType.APPLICATION_XML)
-    public Match getMatch() {
-        Match match = new Match("Ice Hockey");
-        return match;
+    public DaoCourse getCourse() {
+        DaoCourse daoCourse = new DaoCourse("Introduction To Algorithms");
+        return daoCourse;
     }
 
 
@@ -73,6 +72,11 @@ public class StudentService {
             DaoStudent daoStudent;
             for(Student student: getStudents()){
                 daoStudent = new DaoStudent(student.getFullname());
+                DaoCourse daoCourse;
+                for(Course course: student.getCourses()) {
+                    daoCourse = new DaoCourse(course.getCoursename());
+                    daoStudent.addCourse(daoCourse);
+                }
                 daoStudents.add(daoStudent);
             }
         }

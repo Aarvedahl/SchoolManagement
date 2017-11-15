@@ -1,32 +1,28 @@
 package io.github.aarvedahl.dao;
 
 
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.List;
 
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DaoCourse {
+    @XmlElement private String coursename;
 
-    @XmlElement
-    private String coursename;
-
-    @XmlElementWrapper(name="students")
-    @XmlElement(name="student")
-    private List<DaoStudent> students;
-
-
-    public DaoCourse(String coursename, List<DaoStudent> students) {
+    public DaoCourse(String coursename) {
         this.coursename = coursename;
-        this.students = students;
     }
+    public DaoCourse() {    }
 
     public String getCoursename() {
         return coursename;
     }
 
-    public List<DaoStudent> getStudents() {
-        return students;
+    public void setCoursename(String coursename) {
+        this.coursename = coursename;
     }
+
 }
