@@ -47,6 +47,11 @@
             <version>2.2</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.sportsing</groupId>
+            <artifactId>api-classes</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>SchoolManagement</finalName>

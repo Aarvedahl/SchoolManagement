@@ -1,15 +1,32 @@
 package io.github.aarvedahl.webservice;
 
+import com.sportsing.api.Match;
+import io.github.aarvedahl.dao.DaoCourse;
 import io.github.aarvedahl.dao.DaoStudent;
+import io.github.aarvedahl.entities.Course;
+import io.github.aarvedahl.entities.Student;
+import io.github.aarvedahl.facades.CourseFacade;
+import io.github.aarvedahl.facades.StudentFacade;
 
+import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 @Path("/studentService")
 public class StudentService {
+
+    @EJB private StudentFacade studentEJB;
+    @EJB private CourseFacade courseEJB;
+
+    private List<Student> students;
+    private List<Course> courses;
+    private List<DaoStudent> daoStudents;
+    private List<DaoCourse> daoCourses;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -17,13 +34,6 @@ public class StudentService {
         return "Hello World 2";
     }
 
-    @GET
-    @Path("/student")
-    @Produces(MediaType.APPLICATION_XML)
-    public DaoStudent getStudent() {
-        DaoStudent pojoStudent = new DaoStudent(1, "Alex", "kg");
-        return pojoStudent;
-    }
 
     @GET
     @Path("/upperCase/{word}")
@@ -35,10 +45,55 @@ public class StudentService {
 
     @GET
     @Path("/list")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getString() {
-        return "";
+    @Produces(MediaType.APPLICATION_XML)
+    public List<DaoStudent> students() {
+        return getDaoStudents();
+    }
+
+    @GET
+    @Path("/student")
+    @Produces(MediaType.APPLICATION_XML)
+    public DaoStudent student() {
+        DaoStudent daoStudent = new DaoStudent("Alex");
+        return daoStudent;
+    }
+
+    @GET
+    @Path("/match")
+    @Produces(MediaType.APPLICATION_XML)
+    public Match getMatch() {
+        Match match = new Match("Ice Hockey");
+        return match;
+    }
 
 
+    public List<DaoStudent> getDaoStudents() {
+        if(daoStudents == null) {
+            daoStudents = new ArrayList<>();
+            DaoStudent daoStudent;
+            for(Student student: getStudents()){
+                daoStudent = new DaoStudent(student.getFullname());
+                daoStudents.add(daoStudent);
+            }
+        }
+        return daoStudents;
+    }
+
+    public List<Student> getStudents() {
+        if(students == null) {
+            students = studentEJB.findAll();
+        }
+        return students;
+    }
+
+    public List<DaoCourse> getDaoCourses() {
+        return daoCourses;
+    }
+
+    public List<Course> getCourses() {
+        if(courses == null) {
+            courses = courseEJB.findAll();
+        }
+        return courses;
     }
 }
