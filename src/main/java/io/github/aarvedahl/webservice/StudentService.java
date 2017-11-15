@@ -1,7 +1,7 @@
 package io.github.aarvedahl.webservice;
 
-import io.github.aarvedahl.dao.DaoCourse;
-import io.github.aarvedahl.dao.DaoStudent;
+import io.github.aarvedahl.DtoCourse;
+import io.github.aarvedahl.DtoStudent;
 import io.github.aarvedahl.entities.Course;
 import io.github.aarvedahl.entities.Student;
 import io.github.aarvedahl.facades.CourseFacade;
@@ -24,8 +24,8 @@ public class StudentService {
 
     private List<Student> students;
     private List<Course> courses;
-    private List<DaoStudent> daoStudents;
-    private List<DaoCourse> daoCourses;
+    private List<DtoStudent> dtoStudents;
+    private List<DtoCourse> dtoCourses;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -42,45 +42,46 @@ public class StudentService {
     }
 
 
+    // TODO Bygg en ny frontend i ett eget projekt för att visa alla studenter
     @GET
     @Path("/list")
     @Produces(MediaType.APPLICATION_XML)
-    public List<DaoStudent> students() {
-        return getDaoStudents();
+    public List<DtoStudent> students() {
+        return getDtoStudents();
     }
 
     @GET
     @Path("/student")
     @Produces(MediaType.APPLICATION_XML)
-    public DaoStudent student() {
-        DaoStudent daoStudent = new DaoStudent("Alex");
-        return daoStudent;
+    public DtoStudent student() {
+        DtoStudent dtoStudent = new DtoStudent("Alex");
+        return dtoStudent;
     }
 
     @GET
     @Path("/course")
     @Produces(MediaType.APPLICATION_XML)
-    public DaoCourse getCourse() {
-        DaoCourse daoCourse = new DaoCourse("Introduction To Algorithms");
-        return daoCourse;
+    public DtoCourse getCourse() {
+        DtoCourse dtoCourse = new DtoCourse("Introduction To Algorithms");
+        return dtoCourse;
     }
 
 
-    public List<DaoStudent> getDaoStudents() {
-        if(daoStudents == null) {
-            daoStudents = new ArrayList<>();
-            DaoStudent daoStudent;
+    public List<DtoStudent> getDtoStudents() {
+        if(dtoStudents == null) {
+            dtoStudents = new ArrayList<>();
+            DtoStudent dtoStudent;
             for(Student student: getStudents()){
-                daoStudent = new DaoStudent(student.getFullname());
-                DaoCourse daoCourse;
+                dtoStudent = new DtoStudent(student.getFullname());
+                DtoCourse dtoCourse;
                 for(Course course: student.getCourses()) {
-                    daoCourse = new DaoCourse(course.getCoursename());
-                    daoStudent.addCourse(daoCourse);
+                    dtoCourse = new DtoCourse(course.getCoursename());
+                    dtoStudent.addCourse(dtoCourse);
                 }
-                daoStudents.add(daoStudent);
+                dtoStudents.add(dtoStudent);
             }
         }
-        return daoStudents;
+        return dtoStudents;
     }
 
     public List<Student> getStudents() {
@@ -90,8 +91,8 @@ public class StudentService {
         return students;
     }
 
-    public List<DaoCourse> getDaoCourses() {
-        return daoCourses;
+    public List<DtoCourse> getDtoCourses() {
+        return dtoCourses;
     }
 
     public List<Course> getCourses() {
