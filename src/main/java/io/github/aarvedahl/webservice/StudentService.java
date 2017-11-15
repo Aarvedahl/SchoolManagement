@@ -1,6 +1,6 @@
 package io.github.aarvedahl.webservice;
 
-import io.github.aarvedahl.Pojo.PojoStudent;
+import io.github.aarvedahl.dao.DaoStudent;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -20,8 +20,8 @@ public class StudentService {
     @GET
     @Path("/student")
     @Produces(MediaType.APPLICATION_XML)
-    public PojoStudent getStudent() {
-        PojoStudent pojoStudent = new PojoStudent(1, "Alex", "kg");
+    public DaoStudent getStudent() {
+        DaoStudent pojoStudent = new DaoStudent(1, "Alex", "kg");
         return pojoStudent;
     }
 

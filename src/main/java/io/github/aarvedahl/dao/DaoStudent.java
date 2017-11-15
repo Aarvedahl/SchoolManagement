@@ -1,21 +1,19 @@
-package io.github.aarvedahl.Pojo;
+package io.github.aarvedahl.dao;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class PojoStudent {
+public class DaoStudent {
     @XmlElement
     private String name;
-    @XmlElement
-    private int id;
+
     @XmlElement
     private String course;
 
 
-    public PojoStudent() {}
-    public PojoStudent(int id, String name, String course) {
-        this.id = id;
+    public DaoStudent() {}
+    public DaoStudent(String name, String course) {
         this.name = name;
         this.course = course;
     }
@@ -27,7 +25,5 @@ public class PojoStudent {
     public String getName() {
         return name;
     }
-    public int getId() {
-        return id;
-    }
+
 }
