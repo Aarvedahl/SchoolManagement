@@ -42,7 +42,6 @@ public class StudentService {
     }
 
 
-    // TODO Bygg en ny frontend i ett eget projekt för att visa alla studenter
     @GET
     @Path("/list")
     @Produces(MediaType.APPLICATION_XML)
